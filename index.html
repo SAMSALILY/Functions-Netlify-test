@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+     
+  <h1>Hello</h1>
+ 
+   <input id='mtow' name="name" type="text" value='Mtow'>
+   <hr>
+   <input id='landing' type="text" value='Landing'>
+  
+  
+   <script type="text/javascript" >
+   //const fetch = require("node-fetch");
+    var Mx=prompt ('Introduce MTOW')
+
+    
+    
+    alert(Mx)
+     //function post(){ M= document.getElementById('id').value;} 
+    // let q ={}; let Mtow=0; 
+fetch("/.netlify/functions/quote", {
+  method: 'POST',
+  headers: {
+    Accept: "application/json",
+  },
+  body: JSON.stringify({"M":Mx})
+  //body: {"M":25}
+})
+.then(res=> res.json())
+//.then(res => {res.data;  q.push(res); console.log(q[0].Mtow)})
+.then(res => {res.data;
+ console.log(res)
+//q={...res};
+document.getElementById('mtow').value=res.Mtow
+document.getElementById('landing').value=res.Landing
+
+})
+.catch(err=>console.log(err));
+
+console.log(Mx)
+
+
+
+
+
+    </script>
+ 
+    
+</body>
+</html>
