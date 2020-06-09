@@ -14,6 +14,7 @@
    <input id='mtow' name="name" type="text" value='Mtow'>
    <hr>
    <input id='landing' type="text" value='Landing'>
+   <input id='handling' type="text" value='Handling'>
   
   
    <script type="text/javascript" >
@@ -40,6 +41,7 @@ fetch("/.netlify/functions/quote", {
 //q={...res};
 document.getElementById('mtow').value=res.Mtow
 document.getElementById('landing').value=res.Landing
+document.getElementById('handling').value=res.Handling
 
 })
 .catch(err=>console.log(err));
