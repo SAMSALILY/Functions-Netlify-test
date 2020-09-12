@@ -5,7 +5,7 @@
   "main": "fetch1.js",
   "dependencies": {
     "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {},
   "scripts": {
